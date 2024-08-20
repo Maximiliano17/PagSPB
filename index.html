@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/EstilosGeneral.css">
     <title>Sandra CORPS</title>
 </head>
@@ -62,41 +63,91 @@
                 </span>
               </p>
             </article>
-            <section id="haircuts-section">
-                <h2>Ejemplos De Cortes</h2>
-                <div class="haircuts-container">
-                    <!-- Tarjeta 1 -->
-                    <div class="haircut-card">
-                        <img src="./assets/imagen-corte-4.webp" alt="Corte Clásico">
-                        <h3>Corte Clásico</h3>
-                        <p>Un corte elegante y atemporal.</p>
-                        <span class="price">$15</span>
-                    </div>
-                    <!-- Tarjeta 2 -->
-                    <div class="haircut-card">
-                        <img src="./assets/imagen-corte-1.webp" alt="Fade Moderno">
-                        <h3>Fade Moderno</h3>
-                        <p>Un estilo fresco con un degradado perfecto.</p>
-                        <span class="price">$20</span>
-                    </div>
-                    <!-- Tarjeta 3 -->
-                    <div class="haircut-card">
-                        <img src="./assets/imagen-corte-2.webp" alt="Corte Desvanecido">
-                        <h3>Corte Desvanecido</h3>
-                        <p>Perfecto para un look sofisticado y moderno.</p>
-                        <span class="price">$18</span>
-                    </div>
-                    <!-- Tarjeta 4 -->
-                    <div class="haircut-card">
-                        <img src="./assets/imagen-corte-3.webp" alt="Corte Texturizado">
-                        <h3>Corte Texturizado</h3>
-                        <p>Un corte con volumen y textura para un look natural.</p>
-                        <span class="price">$22</span>
-                    </div>
-                </div>
-            </section>
-                        
-        </section>
+             <!-- Sección de ejemplos de cortes -->
+    <section id="haircuts-section">
+        <h2>Ejemplos De Cortes</h2>
+        <div class="haircuts-container">
+            <!-- Tarjeta 1 -->
+            <div class="haircut-card" onclick="openModal('modal1')">
+                <img src="./assets/imagen-corte-4.webp" alt="Corte Clásico">
+                <h3>Corte Clásico</h3>
+                <p>Un corte elegante y atemporal.</p>
+                <span class="price">$15</span>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="haircut-card" onclick="openModal('modal2')">
+                <img src="./assets/imagen-corte-1.webp" alt="Fade Moderno">
+                <h3>Fade Moderno</h3>
+                <p>Un estilo fresco con un degradado perfecto.</p>
+                <span class="price">$20</span>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="haircut-card" onclick="openModal('modal3')">
+                <img src="./assets/imagen-corte-2.webp" alt="Corte Desvanecido">
+                <h3>Corte Desvanecido</h3>
+                <p>Perfecto para un look sofisticado y moderno.</p>
+                <span class="price">$18</span>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="haircut-card" onclick="openModal('modal4')">
+                <img src="./assets/imagen-corte-3.webp" alt="Corte Texturizado">
+                <h3>Corte Texturizado</h3>
+                <p>Un corte con volumen y textura para un look natural.</p>
+                <span class="price">$22</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Corte Clásico</h2>
+            <img src="./assets/imagen-corte-4.webp" alt="Corte Clásico" class="modal-img">
+            <p>Descripción detallada del Corte Clásico. Ideal para ocasiones formales y para aquellos que prefieren un estilo más tradicional.</p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Fade Moderno</h2>
+            <img src="./assets/imagen-corte-1.webp" alt="Fade Moderno" class="modal-img">
+            <p>Descripción detallada del Fade Moderno. Un estilo que combina frescura y sofisticación con un degradado perfecto.</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Corte Desvanecido</h2>
+            <img src="./assets/imagen-corte-2.webp" alt="Corte Desvanecido" class="modal-img">
+            <p>Descripción detallada del Corte Desvanecido. Perfecto para un look moderno y sofisticado, con transiciones suaves.</p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Corte Texturizado</h2>
+            <img src="./assets/imagen-corte-3.webp" alt="Corte Texturizado" class="modal-img">
+            <p>Descripción detallada del Corte Texturizado. Un corte que aporta volumen y textura para un estilo más natural y relajado.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Cerrar modal si se hace clic fuera de él
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
     </div>
     <footer id="footer-container">
         <div class="footer-content">

@@ -70,6 +70,23 @@
     color: rgb(196, 187, 187);
 }
 
+@media (max-width: 900px){
+    .header-nav-list{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }  
+     
+}
+@media (max-width: 500px){
+    .header-nav-list{
+        font-size: 10px;
+    } 
+}
+
 /*Body-Container*/
 #body-container{
     width: 100%;
@@ -365,4 +382,96 @@
     .footer-content {
         flex-direction: column;
     }
+} 
+
+/* Sección de ejemplos de cortes */
+#haircuts-section {
+    padding: 20px;
+}
+
+.haircuts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.haircut-card {
+    background: #333;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.haircut-card:hover {
+    transform: scale(1.05);
+}
+
+.haircut-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.haircut-card h3 {
+    margin: 10px 0;
+    color: #44B678;
+}
+
+.haircut-card p {
+    margin: 0;
+}
+
+.price {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #f5f5f5;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    color: #f5f5f5;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.close {
+    color: #f5f5f5;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #44B678;
+    text-decoration: none;
+    cursor: pointer;
 }
